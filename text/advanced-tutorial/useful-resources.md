@@ -49,7 +49,7 @@ Mark Winteringham has some useful study material on REST and automating Web Serv
 
 ## Resources to learn from James Willett
 
-- https://james-willett.com/tag/rest-assured/
+- https://www.james-willett.com/blog/restassured/
     - blog posts on REST Assured
 
 ---

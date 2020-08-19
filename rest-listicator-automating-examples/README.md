@@ -14,29 +14,25 @@ Used in REST API Testing Training by [Alan Richardson](https://compendiumdev.co.
 >  - how would you structure the code?
 
 
- The code is not intended to be a 'best practice' approach to automating or using REST Assured.
+The code is not intended to be a 'best practice' approach to automating or using REST Assured.
 
- You might also like to compare this to some other code bases using REST Assured to see what style of coding you prefer:
+You might also like to compare this to some other code bases using REST Assured to see what style of coding you prefer:
 
 - Mark Winteringham's code in different languages and frameworks demonstrating REST API automated execution
     - https://github.com/mwinteringham/api-framework
     - https://github.com/mwinteringham/presentations
-    - http://www.mwtestconsultancy.co.uk/
 
 - Bas Dijkstra's API REST Assured Code and slides
     - http://www.ontestautomation.com/open-source-workshops/
     - http://www.ontestautomation.com/category/api-testing/
 
 - James Willett's blog posts on REST Assured
-    - https://james-willett.com/tag/rest-assured/
-    - API Code https://github.com/TechieTester
+    - https://www.james-willett.com/blog/restassured/
       
 - Alan Richardson
     - Github code samples using REST Assured
-        - https://github.com/eviltester/rest-listicator-automating-examples
         - https://github.com/eviltester/tracksrestcasestudy
         - https://github.com/eviltester/libraryexamples
-
     - Automating and Testing a REST API
         - support page (videos) - https://www.compendiumdev.co.uk/page/tracksrestsupport
         - book - https://compendiumdev.co.uk/pag/tracksrestapibook

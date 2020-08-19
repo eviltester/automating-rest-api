@@ -2,6 +2,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+
+
     <groupId>uk.co.compendiumdev</groupId>
     <artifactId>automating-rest-api-examples</artifactId>
     <version>1.0.0</version>
@@ -13,6 +15,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>1.8</java.version>
         <rest-assured-version>4.2.0</rest-assured-version>
+        <junit-version>4.12</junit-version>
+        <gson-version>2.8.1</gson-version>
     </properties>
 
     <modules>
@@ -22,5 +26,58 @@
         <module>abstraction-exercises-answers</module>
     </modules>
 
+    <!--
+    Added to allow Rest Assured 3.0.7 to run on Java 1.9
 
+    http://blog.javafortesters.com/2018/04/changes-to-automating-rest-api-code.html#more
+-->
+    <!--
+    <dependency>
+        <groupId>com.sun.xml.bind</groupId>
+        <artifactId>jaxb-impl</artifactId>
+        <version>2.3.0</version>
+    </dependency>
+    <dependency>
+        <groupId>com.sun.xml.bind</groupId>
+        <artifactId>jaxb-core</artifactId>
+        <version>2.3.0</version>
+    </dependency>
+    <dependency>
+        <groupId>javax.activation</groupId>
+        <artifactId>activation</artifactId>
+        <version>1.1.1</version>
+    </dependency>
+    -->
+
+    <!-- experiment with moving away from Jaxb -->
+    <!-- http://x-stream.github.io/ -->
+    <!--
+    <dependency>
+        <groupId>com.thoughtworks.xstream</groupId>
+        <artifactId>xstream</artifactId>
+        <version>1.4.11.1</version>
+        <scope>test</scope>
+    </dependency>
+    -->
+
+    <!-- lightweight xml to json conversion -->
+    <!-- https://github.com/stleary/JSON-java -->
+    <!-- commented out as a reminder, but likely to just use REST Assured -->
+    <!--
+    <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20160212</version>
+    </dependency>
+    -->
+
+    <!-- possibly add proxy to analyse coverage, requests, etc. results -->
+    <!--
+    <dependency>
+        <groupId>net.lightbody.bmp</groupId>
+        <artifactId>browsermob-core</artifactId>
+        <version>2.1.4</version>
+        <scope>test</scope>
+    </dependency>
+    -->
 </project>

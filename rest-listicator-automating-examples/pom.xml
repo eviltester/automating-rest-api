@@ -4,72 +4,40 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>uk.co.compendiumdev</groupId>
+        <artifactId>automating-rest-api-examples</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
     <groupId>uk.co.compendiumdev</groupId>
     <artifactId>rest-listicator-automating-examples</artifactId>
     <version>1.0.0</version>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
 
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>3.0.7</version>
+            <version>${rest-assured-version}</version>
         </dependency>
 
-        <!--
-            Added to allow Rest Assured 3.0.7 to runon Java 1.9
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit-version}</version>
+            <scope>test</scope>
+        </dependency>
 
-            http://blog.javafortesters.com/2018/04/changes-to-automating-rest-api-code.html#more
-        -->
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-impl</artifactId>
-            <version>2.3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-core</artifactId>
-            <version>2.3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.activation</groupId>
-            <artifactId>activation</artifactId>
-            <version>1.1.1</version>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.8.1</version>
+            <version>${gson-version}</version>
         </dependency>
 
-        <!-- lightweight xml to json conversion -->
-        <!-- https://github.com/stleary/JSON-java -->
-        <!-- commented out as a reminder, but likely to just use REST Assured -->
-        <!--
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20160212</version>
-        </dependency>
-        -->
 
-        <!-- possibly add proxy to analyse coverage, requests, etc. results -->
-        <!--
-        <dependency>
-            <groupId>net.lightbody.bmp</groupId>
-            <artifactId>browsermob-core</artifactId>
-            <version>2.1.4</version>
-            <scope>test</scope>
-        </dependency>
-        -->
 
     </dependencies>
 
