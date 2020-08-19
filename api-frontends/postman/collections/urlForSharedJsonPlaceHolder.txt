@@ -1,0 +1,3 @@
+Import shared collection into Postman
+
+https://www.getpostman.com/collections/2c7270ffbd075f03e33d

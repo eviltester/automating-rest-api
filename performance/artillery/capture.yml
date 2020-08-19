@@ -1,0 +1,31 @@
+# https://artillery.io/docs/getting-started/
+# https://artillery.io/docs/http-reference/#get-post-put-patch-delete-requests
+# https://artillery.io/docs/basic-concepts/
+
+config:
+  target: 'http://localhost:4567/listicator'
+  phases:
+    - duration: 10
+      arrivalRate: 10
+  processor: "./javascript-helpers.js"
+scenarios:
+  - flow:
+    - function: "millisTitle"
+   
+    - post: # create a list
+        headers:
+          Authorization: "Basic YWRtaW46cGFzc3dvcmQ="
+        url: "/lists"
+        capture:
+          - header: "location"  # header names need to be lowercase
+            as: "newlistguid"
+        json:
+          title: "{{ title }}"  # was "my title"
+
+    # using the captured variable needs to come after
+    - get:
+        url: "{{ newlistguid }}"
+        ifTrue: "newlistguid"
+
+    # - log: "{{ newlistguid }}"
+

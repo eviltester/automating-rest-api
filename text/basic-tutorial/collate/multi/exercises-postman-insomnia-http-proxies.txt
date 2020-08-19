@@ -1,0 +1,28 @@
+# HTTP Handout Index
+
+
+# browser section
+../slides_010_http_basics_section.md
+
+
+# HTTP Section
+../slides_030_http_requests_responses_verbs.md
+../slides_040_more_http_detail.md
+
+../slides_longform_exercises.md
+
+
+# Proxies
+../slides_070_proxies.md
+
+
+# Exercises for Postman Insomnia HTTP Proxies
+
+../slides_exercises.md
+
+# REST API section
+../slides_020_web_api_basics.md
+../slides_050_rest_api_basics_section.md
+../slides_060_testing_rest_api.md
+../slides_090_automating.md
+../slides_120_summary_q_n_a.md

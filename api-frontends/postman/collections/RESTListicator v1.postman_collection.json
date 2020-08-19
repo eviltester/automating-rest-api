@@ -1,0 +1,316 @@
+{
+	"variables": [],
+	"info": {
+		"name": "RESTListicator v1",
+		"_postman_id": "975ccc66-9ad8-7cbb-a2cf-16275271fbbd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Adhoc Request",
+			"request": {
+				"url": "http://{{host}}/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Heartbeat",
+			"request": {
+				"url": "http://{{host}}/heartbeat",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"title\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET List Lists in JSON",
+			"request": {
+				"url": "http://{{host}}/lists",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET List Lists in XML",
+			"request": {
+				"url": "http://{{host}}/lists",
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET List Users in XML",
+			"request": {
+				"url": "http://{{host}}/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET List Users in JSON",
+			"request": {
+				"url": "http://{{host}}/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET Filtered List Users on username in JSON",
+			"request": {
+				"url": {
+					"raw": "http://{{host}}/users?username=\"r\"",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "\"r\"",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Options on lists",
+			"request": {
+				"url": "http://{{host}}/lists",
+				"method": "OPTIONS",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET A Specific List",
+			"request": {
+				"url": "http://{{host}}/lists/d4625287-989a-4454-b01a-cb99545a87a6",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create List Using JSON",
+			"request": {
+				"url": "http://{{host}}/lists",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"title\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create A List using XML",
+			"request": {
+				"url": "http://{{host}}/lists",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\r<lists>\r\r    <list>\r\r        <title>title</title>\r\r        <description>hello</description>\r\r    </list>\r\r</lists>"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE a list via GUID using admin user",
+			"request": {
+				"url": "http://{{host}}/lists/caf31d41-8a83-427c-957c-9ace00e1b53a",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQ=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create List Using JSON PUT",
+			"request": {
+				"url": "http://{{host}}/lists",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"title added with put\",\n\"description\":\"list description\",\n\"guid\": \"guidcreatediwthput201708171054\",\n\"createdDate\": \"2017-08-17-14-30-34\",\n\"amendedDate\": \"2017-08-17-14-30-34\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Patch A Lists",
+			"request": {
+				"url": "http://{{host}}/lists/d4625287-989a-4454-b01a-cb99545a87a6",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"title2\",\"description\":\"this is the desc\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Make it buggy",
+			"request": {
+				"url": "http://{{host}}/feature-toggles",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic c3VwZXJhZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<toggles>\n<toggle><key>BUG_001_FIXED</key><value>false</value></toggle>\n<toggle><key>BUG_002_FIXED</key><value>false</value></toggle>\n<toggle><key>BUG_003_FIXED</key><value>false</value></toggle>\n<toggle><key>BUG_004_FIXED</key><value>false</value></toggle>\n<toggle><key>BUG_005_FIXED</key><value>false</value></toggle>\n<toggle><key>BUG_006_FIXED</key><value>false</value></toggle>\n</toggles>"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

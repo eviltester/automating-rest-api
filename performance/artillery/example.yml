@@ -1,0 +1,37 @@
+# https://artillery.io/docs/getting-started/
+# https://artillery.io/docs/http-reference/#get-post-put-patch-delete-requests
+# https://artillery.io/docs/basic-concepts/
+#
+# what is the basic auth value?
+# btoa(encodeURIComponent("admin" + ':' + "password"))
+#
+# run this like...
+# artillery run example.yml -o results.json
+# HTTP_PROXY='http://localhost:8080' artillery run example.yml -o results.json
+# artillery report results.json
+
+config:
+  target: 'http://localhost:4567/listicator'
+  phases:
+    - duration: 20
+      arrivalRate: 10
+  processor: "./javascript-helpers.js"
+scenarios:
+  - flow:
+    - get:
+        url: "/lists"
+    - function: "millisTitle"
+    - post: # create a list
+        headers:
+          Authorization: "Basic YWRtaW46cGFzc3dvcmQ="
+        url: "/lists"
+        json:
+          title: "{{ title }}"
+        capture:
+          - header: "location"
+            as: "newlistguid"
+    - get:
+        url: "{{ newlistguid }}"
+        ifTrue: "newlistguid"
+
+

@@ -1,0 +1,37 @@
+# Index
+
+# **08:30 - 12:30**
+
+# 08:30 - 09:30 - 1st hour
+
+# - 08:30 - 08:40  General Overview (TELL)
+
+intro.md
+
+
+../slides_010_http_basics_section.md
+../slides_020_web_api_basics.md
+../slides_030_http_requests_responses_verbs.md
+../slides_longform_exercises.md
+../slides_040_more_http_detail.md
+../slides_050_rest_api_basics_section.md
+../slides_060_testing_rest_api.md
+../slides_longform_exercises.md
+../slides_070_proxies.md
+../slides_longform_exercises.md
+
+# Automating Talky Examples
+# Automating Hands On
+../slides_090_automating.md
+
+../slides_longform_exercises.md
+../slides_longform_exercises.md
+
+../slides_120_summary_q_n_a.md
+
+
+
+
+../about_alan/about_alan_end_slides.md
+
+../slides_exercises.md

@@ -1,0 +1,5 @@
+The text documentation is licensed for personal study purposes only.
+
+Do not use this for training or reproduce in any form without permission from the copyright holder.
+
+Copyright 2020 Alan Richardson  https://eviltester.com

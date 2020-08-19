@@ -1,0 +1,1 @@
+java -jar pandocifier.jar  simplepandocifier.properties

@@ -1,0 +1,41 @@
+{
+	"variables": [],
+	"info": {
+		"name": "RestListicatorCreateUsersFromData",
+		"_postman_id": "c412d961-309e-6761-7530-9fba4910a3b3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Create Users using  JSON from Data",
+			"request": {
+				"url": "http://{{host}}/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQ=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{username:\"{{username}}\", password:\"{{password}}\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

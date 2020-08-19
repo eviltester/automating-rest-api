@@ -1,0 +1,6 @@
+# REST API section
+../slides_020_web_api_basics.md
+../slides_050_rest_api_basics_section.md
+../slides_060_testing_rest_api.md
+../slides_090_automating.md
+../slides_120_summary_q_n_a.md

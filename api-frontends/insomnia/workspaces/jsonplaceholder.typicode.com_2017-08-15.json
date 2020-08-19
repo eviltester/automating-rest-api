@@ -1,0 +1,272 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2017-08-15T10:49:43.375Z",
+	"__export_source": "insomnia.desktop.app:v5.7.12",
+	"resources": [
+		{
+			"_id": "wrk_a193c20a4fb14982b1ac64fe65f93d6b",
+			"parentId": null,
+			"modified": 1502793246656,
+			"created": 1502793236258,
+			"name": "jsonplaceholder.typicode.com",
+			"description": "",
+			"certificates": [],
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_3343d865b99a4807b07b8e0646f52f59",
+			"parentId": "wrk_a193c20a4fb14982b1ac64fe65f93d6b",
+			"modified": 1502793327071,
+			"created": 1502793327071,
+			"name": "Base Environment",
+			"data": {},
+			"color": null,
+			"isPrivate": false,
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_77cef4722c1547968503a7528a5c9edf",
+			"parentId": "wrk_a193c20a4fb14982b1ac64fe65f93d6b",
+			"modified": 1502793333594,
+			"created": 1502793332958,
+			"name": "Default Jar",
+			"cookies": [
+				{
+					"creation": "2017-08-15T10:35:33.592Z",
+					"key": "__cfduid",
+					"value": "d4f25dbb162394d498eb5ecd87e1f806b1502793333",
+					"expires": "2018-08-15T10:35:33.000Z",
+					"path": "/",
+					"domain": "typicode.com",
+					"httpOnly": true,
+					"hostOnly": false,
+					"lastAccessed": "2017-08-15T10:35:33.592Z"
+				}
+			],
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_62269ed5105b42f0b77576ba4a845412",
+			"parentId": "wrk_a193c20a4fb14982b1ac64fe65f93d6b",
+			"modified": 1502793532095,
+			"created": 1502793326988,
+			"url": "http://jsonplaceholder.typicode.com/posts",
+			"name": "GET all posts",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "",
+					"value": "",
+					"id": "pair_69c0625ea52b40eea61eaab4e2484bc1"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502793485951,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_7e50c32eb9c04a089669919da06f5ff5",
+			"parentId": "wrk_a193c20a4fb14982b1ac64fe65f93d6b",
+			"modified": 1502793534185,
+			"created": 1502793406248,
+			"url": "http://jsonplaceholder.typicode.com/posts/1",
+			"name": "GET single post",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1502793485926,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_f64e54524fe14652a19c227f20b99c68",
+			"parentId": "wrk_a193c20a4fb14982b1ac64fe65f93d6b",
+			"modified": 1502793536840,
+			"created": 1502793443892,
+			"url": "http://jsonplaceholder.typicode.com/posts/1/comments",
+			"name": "GET single post's comments",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1502793485913.5,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_c7b594c88d354d8d94b021885dc74a53",
+			"parentId": "wrk_a193c20a4fb14982b1ac64fe65f93d6b",
+			"modified": 1502793510145,
+			"created": 1502793485901,
+			"url": "http://jsonplaceholder.typicode.com/comments?postId=1",
+			"name": "Get single post's comments via query",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1502793485901,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_56b35b6f4bc843c0b1468937670cac85",
+			"parentId": "wrk_a193c20a4fb14982b1ac64fe65f93d6b",
+			"modified": 1502793570849,
+			"created": 1502793558344,
+			"url": "http://jsonplaceholder.typicode.com/posts?userId=1",
+			"name": "GET a user's posts via query",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1502793485851,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_2344b7f620e6434f96e926db5cba5f4b",
+			"parentId": "wrk_a193c20a4fb14982b1ac64fe65f93d6b",
+			"modified": 1502793656029,
+			"created": 1502793602280,
+			"url": "http://jsonplaceholder.typicode.com/posts",
+			"name": "create a new post with POST",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"userId\": 1,\n  \"title\": \"new post\",\n  \"body\": \"description of post\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_a926ea80b34a435e9deecf4e63242e1d"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502793485801,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_46a38694e9b74f088709e6a00faeb1ab",
+			"parentId": "wrk_a193c20a4fb14982b1ac64fe65f93d6b",
+			"modified": 1502793829361,
+			"created": 1502793778703,
+			"url": "http://jsonplaceholder.typicode.com/posts",
+			"name": "amend a post with POST",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"userId\": 1,\n  \"title\": \"new post title\",\n  \"body\": \"description of post\",\n\t\"id\": 1\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_a926ea80b34a435e9deecf4e63242e1d"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502751699834.5,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_08b484172449411ba55cd4079513d6fa",
+			"parentId": "wrk_a193c20a4fb14982b1ac64fe65f93d6b",
+			"modified": 1502794043216,
+			"created": 1502793895262,
+			"url": "http://jsonplaceholder.typicode.com/posts/1",
+			"name": "delete a specific post with DELETE",
+			"description": "",
+			"method": "DELETE",
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_a926ea80b34a435e9deecf4e63242e1d"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502746476588.6875,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_53ca98bd80f14bbabc6b246ec5283f89",
+			"parentId": "wrk_a193c20a4fb14982b1ac64fe65f93d6b",
+			"modified": 1502794122650,
+			"created": 1502794037816,
+			"url": "http://jsonplaceholder.typicode.com/posts/1",
+			"name": "create a post with PUT",
+			"description": "",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"userId\": 1,\n  \"title\": \"a commpletely new post title\",\n  \"body\": \"description of new post\",\n\t\"id\": 1\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json",
+					"id": "pair_a926ea80b34a435e9deecf4e63242e1d"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502741253342.875,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		}
+	]
+}

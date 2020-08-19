@@ -1,0 +1,63 @@
+Originally from REST API book
+
+D:\Users\Alan\Documents\xp-dev\eLearning\tracksApiCaseStudy\text
+
+---
+
+http://www.plantuml.com/plantuml/uml/VP0n3i8m34NtdCBgpWKwe59n00G32qi87Yo59CIkAcvF8gMGj1AZvVV_ipomw2ZJqoeXiGYZPZ9mnJiSGh1aj91tIeK4aQ6WdK2NjsFqCsFiG7EcoxZbgfQ5hOj_qTs-NVMB0Yxe7WndV4t8ebfgcrf9uURW5Br1PkGy_Eafmhx9BtOEtZ6k3_v6gfzaov4uMFqknf8TKbNwz0S0
+
+@startuml
+title Basic Web Application
+
+participant "Web Browser" as WebBrowser
+participant "Web Application" as WebApplication
+WebBrowser->WebApplication: Browser Sends Request
+WebApplication->WebApplication: Web Application \n Processes \n Request
+WebApplication->WebBrowser: Application Sends Response
+WebBrowser->WebBrowser: Web Browser \n Displays \n Response
+@enduml
+
+
+---
+
+
+http://www.plantuml.com/plantuml/uml/bP8nRyCW48LtViKfkvlTWvKqhRfKQkeqwjA5ugk3H832eSZ_ljY694XLrKnmyBrtxn0hJznHE2f6aXJ2ap5zNDxn4zRMAYauIQCPOpPYKaZBDS5Yxz4jW7iOD-NLgBntvfI9MAUov7vlD4dcAyP6SwYQAuiQQB0OsxRFS22ozNBPJ_2TC4TsuQfczgXp5DYXxgBpunkq-1tG4vk9ghbsJw5QfE2qZoBkn06slCV2V3_1sVf1UgluKE9_X4_OQq0t_2FpzcLt3WqV6hwCAoto82dyUOgDqLqGv4TH4d3TnM9ZbE9qIHAFMlH1aR_XKPBYriV9ZTWg3XU_tGy0
+
+@startuml
+title Google Web Application
+
+
+participant "User" as User
+participant "Web Browser" as WebBrowser
+participant "Google Web Application" as Google
+
+User -> WebBrowser: User types URL http://google.com
+WebBrowser->Google: Browser Sends GET Request
+Google->WebBrowser: Google Returns Search Page
+WebBrowser->User: Browser Displays Search Page
+
+User -> WebBrowser: User types Search Query
+WebBrowser->Google: Browser Sends POST Request \n for Search Query
+Google->Google : Google Conducts \n Search and\n Collates Search \n Results
+Google->WebBrowser: Google Returns Search Results Page
+WebBrowser->User: Browser Displays Search Results
+@enduml
+
+
+---
+
+http://www.plantuml.com/plantuml/uml/PL2nYa913EptAuAzsbk88YA2XUWTDjVadb42QtPDykG-_w9F1RNACCmaCvcOetfxoidPCy5qlOGDdLio1vHzOAj5Z63-XwUQAQLKmy0DLnI7tYmpnPpMchb1vo8zG8EEVfNkwFT3joMzaARKwVlZEp6AANi3lIUvCDwIqU0uWCNy2uQjaLhgrFtnmxNMqf0PsRF3Zy1C2Pq0htZ5mPK3VB_Ok-kZC7chOb7yTaqVtPiYZYminxS5aqWPl_i7
+
+
+@startuml
+title API Request and Response Example
+
+
+participant "Client Application" as Client
+participant "Web Application" as Server
+
+Client-> Server: Sends request via API e.g. GET /users
+Server->Server: Processes Request \n Create a \n List of Users
+Server->Client: Returns an API response containing List of Users
+@enduml
+

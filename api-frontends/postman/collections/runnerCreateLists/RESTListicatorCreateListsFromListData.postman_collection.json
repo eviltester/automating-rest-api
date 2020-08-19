@@ -1,0 +1,41 @@
+{
+	"variables": [],
+	"info": {
+		"name": "RESTListicatorCreateLists",
+		"_postman_id": "a5f93868-137e-f894-328c-77488f7f2e7f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create A List using XML Data File",
+			"request": {
+				"url": "http://{{host}}/lists",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\r<lists>\r\r    <list>\r\r        <title>{{title}}</title>\r\r        <description>{{description}}</description>\r\r    </list>\r\r</lists>"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

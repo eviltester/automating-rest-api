@@ -1,0 +1,473 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2017-08-17T15:18:20.720Z",
+	"__export_source": "insomnia.desktop.app:v5.7.12",
+	"resources": [
+		{
+			"_id": "wrk_64f9d7c0cda6418dba133b461adfb24f",
+			"parentId": null,
+			"modified": 1502982846065,
+			"created": 1502982846065,
+			"name": "RestListicatorv1",
+			"description": "",
+			"certificates": [],
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_4fb8037123c34e18aeb714c103abba3c",
+			"parentId": "wrk_64f9d7c0cda6418dba133b461adfb24f",
+			"modified": 1502982968232,
+			"created": 1502982863771,
+			"name": "Base Environment",
+			"data": {
+				"host": "localhost:4567"
+			},
+			"color": null,
+			"isPrivate": false,
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_d93a09bb08134d7eafd4b92be5425e1b",
+			"parentId": "wrk_64f9d7c0cda6418dba133b461adfb24f",
+			"modified": 1502982942591,
+			"created": 1502982942591,
+			"name": "Default Jar",
+			"cookies": [],
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"parentId": "wrk_64f9d7c0cda6418dba133b461adfb24f",
+			"modified": 1502982863806,
+			"created": 1502982863806,
+			"name": "RESTListicator v1",
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1502982863806,
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_6d80da3e55d3413e9ab3a2ee808b2302",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502983090765,
+			"created": 1502982863781,
+			"url": "http://{{host}}/feature-toggles",
+			"name": "Make it buggy",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/xml",
+				"text": "<toggles>\n<toggle><key>BUG_001_FIXED</key><value>false</value></toggle>\n<toggle><key>BUG_002_FIXED</key><value>false</value></toggle>\n<toggle><key>BUG_003_FIXED</key><value>false</value></toggle>\n<toggle><key>BUG_004_FIXED</key><value>false</value></toggle>\n<toggle><key>BUG_005_FIXED</key><value>false</value></toggle>\n<toggle><key>BUG_006_FIXED</key><value>false</value></toggle>\n</toggles>"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Authorization",
+					"value": "Basic c3VwZXJhZG1pbjpwYXNzd29yZA==",
+					"id": "pair_f16b6e7062804194a9be47f59da71d29"
+				},
+				{
+					"name": "Content-Type",
+					"value": "application/xml",
+					"id": "pair_ba7229017ab14dadbf06b6a99c152997"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863781,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_9acd6e0539ff4b339deec862e40ddf24",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502983084045,
+			"created": 1502982863783,
+			"url": "http://{{host}}/lists/d4625287-989a-4454-b01a-cb99545a87a6",
+			"name": "Patch A Lists",
+			"description": "",
+			"method": "PATCH",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"title\": \"title2\",\"description\":\"this is the desc\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "application/json",
+					"id": "pair_82bf8cbac31e4b829439a92b09469e4a"
+				},
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863783,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_e9ce7a2f31364d95bafd87c6964b5170",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502983078422,
+			"created": 1502982863785,
+			"url": "http://{{host}}/lists",
+			"name": "Create List Using JSON PUT",
+			"description": "",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\"title\":\"title added with put\",\n\"description\":\"list description\",\n\"guid\": \"guidcreatediwthput201708171054\",\n\"createdDate\": \"2017-08-17-14-30-34\",\n\"amendedDate\": \"2017-08-17-14-30-34\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Authorization",
+					"value": "Basic dXNlcjpwYXNzd29yZA==",
+					"id": "pair_77344fae2d654695a60f10bea86501b7"
+				},
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863785,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_de147334926a4309ac21097b65ca363b",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502982863786,
+			"created": 1502982863786,
+			"url": "http://{{host}}/lists/caf31d41-8a83-427c-957c-9ace00e1b53a",
+			"name": "DELETE a list via GUID using admin user",
+			"description": "",
+			"method": "DELETE",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"name": "Authorization",
+					"value": "Basic YWRtaW46cGFzc3dvcmQ="
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863786,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_552f5dcb92ff4632bc944d19093d8996",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502983057473,
+			"created": 1502982863788,
+			"url": "http://{{host}}/lists",
+			"name": "Create A List using XML",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/xml",
+				"text": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\r<lists>\r\r    <list>\r\r        <title>title</title>\r\r        <description>hello</description>\r\r    </list>\r\r</lists>"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "application/json",
+					"id": "pair_8348226dc8074e0aa2e689d27011c0cc"
+				},
+				{
+					"name": "Content-Type",
+					"value": "application/xml",
+					"id": "pair_0901f813a48748c5857eb0f7358a27e5"
+				},
+				{
+					"name": "Authorization",
+					"value": "Basic dXNlcjpwYXNzd29yZA==",
+					"id": "pair_bfd05d4b84294b7a94ef54421ad80132"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863788,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_0ce6dbe09b1646b3827431a59e330762",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502983049141,
+			"created": 1502982863789,
+			"url": "http://{{host}}/lists",
+			"name": "Create List Using JSON",
+			"description": "",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\"title\":\"title\"}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Authorization",
+					"value": "Basic dXNlcjpwYXNzd29yZA==",
+					"id": "pair_dfd46b0a19414c63944fb545c4f06da5"
+				},
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863789,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_879678f542344873aa9f90039596b734",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502982863790,
+			"created": 1502982863790,
+			"url": "http://{{host}}/lists/d4625287-989a-4454-b01a-cb99545a87a6",
+			"name": "GET A Specific List",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "application/xml"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863790,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_31e02b419a16487c885e8b90d1d1d654",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502982863791,
+			"created": 1502982863791,
+			"url": "http://{{host}}/lists",
+			"name": "Options on lists",
+			"description": "",
+			"method": "OPTIONS",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "accept",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863791,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_9af89679d8ff481aa27c9637b3863801",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502983023452,
+			"created": 1502982863793,
+			"url": "http://{{host}}/users?username=\"r\"",
+			"name": "GET Filtered List Users on username in JSON",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "accept",
+					"value": "application/json",
+					"id": "pair_fa9ddf76929a4f6d98ada5b3b5667899"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863793,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_7b17a0f68f2949d08aa1dce5647a9693",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502982863794,
+			"created": 1502982863794,
+			"url": "http://{{host}}/users",
+			"name": "GET List Users in JSON",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "accept",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863794,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_8fd1035271bd4d30aa87dff6693cd2ac",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502982863795,
+			"created": 1502982863795,
+			"url": "http://{{host}}/users",
+			"name": "GET List Users in XML",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "accept",
+					"value": "application/xml"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863795,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_42a0e69f90a240f0b8bb59484c4ddbd5",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502982863797,
+			"created": 1502982863797,
+			"url": "http://{{host}}/lists",
+			"name": "GET List Lists in XML",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "accept",
+					"value": "application/xml"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863797,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_a9658c29325048c09ec55aa4a2af4450",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502982863799,
+			"created": 1502982863799,
+			"url": "http://{{host}}/lists",
+			"name": "GET List Lists in JSON",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863799,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_a100e6205239440f8020043c1ac5164a",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502982940793,
+			"created": 1502982863801,
+			"url": "http://{{host}}/heartbeat",
+			"name": "Heartbeat",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1502982863801,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		},
+		{
+			"_id": "req_26ddc54d01f743b3b33fe0e1b02de3c8",
+			"parentId": "fld_111a7c262448402da80f1e1a0159e4dd",
+			"modified": 1502982863804,
+			"created": 1502982863804,
+			"url": "http://{{host}}/users",
+			"name": "Adhoc Request",
+			"description": "",
+			"method": "GET",
+			"body": {},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "accept",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1502982863804,
+			"settingStoreCookies": true,
+			"settingSendCookies": true,
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"_type": "request"
+		}
+	]
+}

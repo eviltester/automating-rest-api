@@ -1,0 +1,186 @@
+{
+	"variables": [],
+	"info": {
+		"name": "jsonplaceholder.typicode.com",
+		"_postman_id": "aeabc2ff-96b6-d264-0cb5-d1d67364d163",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET all posts",
+			"request": {
+				"url": "http://jsonplaceholder.typicode.com/posts",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET single post",
+			"request": {
+				"url": "http://jsonplaceholder.typicode.com/posts/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET single post's comments",
+			"request": {
+				"url": "http://jsonplaceholder.typicode.com/posts/1/comments",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET single post's comments via Query",
+			"request": {
+				"url": {
+					"raw": "http://jsonplaceholder.typicode.com/comments?postId=1",
+					"protocol": "http",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"comments"
+					],
+					"query": [
+						{
+							"key": "postId",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET a user's posts via query",
+			"request": {
+				"url": {
+					"raw": "http://jsonplaceholder.typicode.com/posts?userId=1",
+					"protocol": "http",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create a new post with POST",
+			"request": {
+				"url": "http://jsonplaceholder.typicode.com/posts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 1,\r\n  \"title\": \"new post\",\r\n  \"body\": \"description of post\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "amend a post with POST",
+			"request": {
+				"url": "http://jsonplaceholder.typicode.com/posts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 1,\r\n  \"title\": \"new post title\",\r\n  \"body\": \"description of post\",\r\n  \"id\": 1\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete a specific post with DELETE",
+			"request": {
+				"url": "http://jsonplaceholder.typicode.com/posts/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 1,\r\n  \"title\": \"new post title\",\r\n  \"body\": \"description of post\",\r\n  \"id\": 1\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create a post with PUT",
+			"request": {
+				"url": "http://jsonplaceholder.typicode.com/posts/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 1,\r\n  \"title\": \"a commpletely new post title\",\r\n  \"body\": \"description of new post\",\r\n\t\"id\": 1\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

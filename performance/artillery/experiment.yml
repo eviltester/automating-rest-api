@@ -1,0 +1,55 @@
+# https://artillery.io/docs/getting-started/
+# https://artillery.io/docs/http-reference/#get-post-put-patch-delete-requests
+# https://artillery.io/docs/basic-concepts/
+#
+# run this like...
+# artillery run experiment.yml -o results.json
+# HTTP_PROXY='http://localhost:8080' artillery run experiment.yml -o results.json
+# artillery report results.json
+
+config:
+  target: 'http://localhost:4567/listicator'
+  phases:
+    - duration: 20
+      arrivalRate: 100
+  processor: "./javascript-helpers.js"
+scenarios:
+  - flow:
+    - get:
+        url: "/heartbeat"
+    - get:
+        headers:
+          accept: "application/xml"
+        url: "/lists"
+    - get:
+        headers:
+          accept: "application/json"
+        url: "/lists"
+    - get:
+        headers:
+          accept: "application/json"
+        url: "/users"
+    - get:
+        headers:
+          accept: "application/xml"
+        url: "/users"
+    - get:
+        headers:
+          accept: "application/xml"
+        url: "{{ newlistguid }}"
+        ifTrue: "newlistguid"        
+    - function: "millisTitle"
+    - post: # create a list
+        headers:
+          Authorization: "Basic YWRtaW46cGFzc3dvcmQ="
+        url: "/lists"
+        json:
+          title: "{{ title }}"  # was "my title"
+        capture:
+          - header: "location"
+            as: "newlistguid"
+    - get:
+        url: "{{ newlistguid }}"
+        ifTrue: "newlistguid"
+
+
