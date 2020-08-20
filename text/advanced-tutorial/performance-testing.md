@@ -109,7 +109,7 @@ function millisTitle(context, events, done){
    - run in separate threads
 - I use for exploratory multi user testing
 
-see [github.com/eviltester/restmudbots](https://github.com/eviltester/restmudbots)
+see see [github.com/eviltester/restmud/tree/master/src/restmudbots](https://github.com/eviltester/restmud/tree/master/src/restmudbots)
 
 ---
 
@@ -167,7 +167,7 @@ public void createAMultiUserRestMudTestBot(){
 - A generic command abstraction `CommandExecutor`
 - I used also for testing end point case testing with the `ChangeCaseifier`
 
-see [github.com/eviltester/restmudbots](https://github.com/eviltester/restmudbots)
+see see [github.com/eviltester/restmud/tree/master/src/restmudbots](https://github.com/eviltester/restmud/tree/master/src/restmudbots)
 
 ---
 
@@ -195,4 +195,4 @@ see [github.com/eviltester/restmudbots](https://github.com/eviltester/restmudbot
         - make more calls
         - create new users
         - etc.
-- Examine the bots in [github.com/eviltester/restmudbots](https://github.com/eviltester/restmudbots)
+- Examine the bots in see [github.com/eviltester/restmud/tree/master/src/restmudbots](https://github.com/eviltester/restmud/tree/master/src/restmudbots)

@@ -236,6 +236,6 @@ I use [postman](https://www.getpostman.com/) for most of my interactive REST API
 - take stuff
 - etc.
 
-see also [github.com/eviltester/restmudbots](https://github.com/eviltester/restmudbots)
+see also see [github.com/eviltester/restmud/tree/master/src/restmudbots](https://github.com/eviltester/restmud/tree/master/src/restmudbots)
 
 

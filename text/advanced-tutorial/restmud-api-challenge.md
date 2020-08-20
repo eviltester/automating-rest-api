@@ -2,7 +2,7 @@
 
 ## Overview of API for REST Mud API Challenge
 
-- download [github.com/eviltester/restmudbots](https://github.com/eviltester/restmudbots)
+- download see [github.com/eviltester/restmud/tree/master/src/restmudbots](https://github.com/eviltester/restmud/tree/master/src/restmudbots)
 - open as project in IntelliJ
 - `RestMudAPI` is a simple API abstraction for the game API
     - this could be used directly to automate the API

@@ -12,7 +12,7 @@ Github code samples using REST Assured
 
 Using JSoup
 
-- https://github.com/eviltester/restmudbots
+- see [github.com/eviltester/restmud/tree/master/src/restmudbots](https://github.com/eviltester/restmud/tree/master/src/restmudbots)
 
 Automating and Testing a REST API
 
